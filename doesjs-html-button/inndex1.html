@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="leftside">
+            <div class="profile">
+                <img height="40px" src="user.png" alt="">
+                <p id="user_email">
+                    HemanshuPatel@gmail.com
+                </p>
+                <img class="bell" height="35px" src="bell.png" alt="">
+            </div>
+            <div class="searchbox">
+                <form class="search-container">
+                    <input type="text" id="search-bar" placeholder="Search">
+
+                    <a href="#"><img height="60px" class="search-icon"
+                            src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"></a>
+                </form>
+            </div>
+            <div class="home"> <img class="imghome" height="30px" src="home.png" alt=""> <a href="index.html">Home</a> </div>
+
+            <div class="documentation">
+                <button class="adduntitled" onclick="addUntitledBox()">Add Untitled File</button>
+                <a href=""><img class="plusimg" height="30px" alt=""></a>
+
+            </div>
+            <br>
+            <br>
+            <div class="leftsideButtom scrollable-container" id="container"></div>
+
+        </div>
+        <div class="right">
+            <div class="topright">
+                <div class="rightbar">
+
+                    <!-- <div class="new"><button class="newbutton"><a href="login.html">Invite + </button></div> -->
+                    <div class="pfp"> <button class="loginbutton"><a href="login.html">Login/Signup</a> </button></div>
+                </div>
+
+                <div class="container2">
+
+
+                    <section class="chat">
+                        <h3 class="h3">WORKSPACE!</h3>
+                        <textarea id="user-input" placeholder="Type your question or prompt here..."></textarea>
+                        <!-- <button id="send-button">Send</button> -->
+
+                    </section>
+
+                </div>
+
+            </div>
+            <div class="bottomright">
+                <div class="empbox">
+                    <h1 class="employeee">Employee Input Form</h1>
+                    <form id="employeeForm">
+                        <div class="numemployees"><label for="numEmployees">Number of Employees:</label></div>
+                        <input type="number" id="numEmployees" name="numEmployees" min="1" required>
+                        <button class="genbuton" type="button" onclick="generateFields()">Generate Fields</button>
+
+                        <div id="employeeFields" class="scrollable-container-2"></div>
+                        <button class="subbtn" id="submitButton" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div id="toast" class="toast"></div>
+    <script type="module" src="index1.js"></script>
+    <script type="module" src="server.js"></script>
+
+</body>
+
+</html>
